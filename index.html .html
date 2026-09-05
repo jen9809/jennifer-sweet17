@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Gizelle Kosasih — Sweet 17</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#dce8e8;
+  color:#24464d;
+  font-family:Montserrat,Arial,sans-serif;
+}
+
+button,
+input,
+textarea{
+  font-family:inherit;
+}
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+#JENNIFER17{
+  width:100%;
+  overflow:hidden;
+}
+
+.j17-opening{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      ellipse at center top,
+      #e8f4f3 0%,
+      #c9e5ed 35%,
+      #acd3e0 72%,
+      #99c5d3 100%
+    );
+}
+
+.j17-opening:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255,255,255,.7),
+      transparent 45%
+    );
+}
+
+.j17-cloud{
+  position:absolute;
+  width:210px;
+  height:65px;
+  background:rgba(255,255,255,.82);
+  border-radius:100px;
+  filter:blur(1px);
+  opacity:.7;
+  z-index:1;
+  animation:j17CloudMove linear infinite;
+}
+
+.j17-cloud:before{
+  content:"";
+  position:absolute;
+  width:95px;
+  height:95px;
+  left:30px;
+  bottom:5px;
+  background:inherit;
+  border-radius:50%;
+}
+
+.j17-cloud:after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  right:25px;
+  bottom:0;
+  background:inherit;
+  border-radius:50%;
+}
+
+.j17-cloud1{
+  top:12%;
+  left:-260px;
+  animation-duration:30s;
+}
+
+.j17-cloud2{
+  top:34%;
+  left:-320px;
+  transform:scale(.75);
+  animation-duration:38s;
+  animation-delay:-12s;
+}
+
+.j17-cloud3{
+  top:67%;
+  left:-300px;
+  transform:scale(.65);
+  animation-duration:34s;
+  animation-delay:-20s;
+}
+
+.j17-cloud4{
+  top:78%;
+  left:-400px;
+  transform:scale(1.1);
+  animation-duration:43s;
+  animation-delay:-7s;
+}
+
+@keyframes j17CloudMove{
+  from{
+    margin-left:0;
+  }
+  to{
+    margin-left:calc(100vw + 600px);
+  }
+}
+
+.j17-content{
+  position:relative;
+  width:min(700px,100%);
+  min-height:760px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index:10;
+  padding:35px 15px;
+}
+
+.j17-kicker{
+  margin-top:8px;
+  font-size:10px;
+  letter-spacing:6px;
+  font-weight:600;
+  color:#25484d;
+}
+
+.j17-title{
+  margin:8px 0 2px;
+  text-align:center;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(38px,8vw,70px);
+  line-height:.9;
+  font-style:italic;
+  font-weight:500;
+  color:#183d42;
+}
+
+.j17-subtitle{
+  text-align:center;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(17px,4vw,24px);
+  color:#47666a;
+}
+
+.j17-airplane{
+  position:absolute;
+  left:-80px;
+  top:43%;
+  font-size:32px;
+  color:white;
+  filter:drop-shadow(0 5px 8px rgba(40,70,80,.25));
+  z-index:20;
+  animation:j17Plane 8s 1s ease-in-out infinite;
+}
+
+@keyframes j17Plane{
+  0%{
+    left:-80px;
+    top:55%;
+    opacity:0;
+    transform:rotate(8deg);
+  }
+
+  12%{
+    opacity:1;
+  }
+
+  50%{
+    top:38%;
+    transform:rotate(-3deg);
+  }
+
+  85%{
+    opacity:1;
+  }
+
+  100%{
+    left:calc(100% + 80px);
+    top:18%;
+    opacity:0;
+    transform:rotate(-10deg);
+  }
+}
+
+.j17-travel{
+  position:relative;
+  width:550px;
+  max-width:95vw;
+  height:450px;
+  margin-top:15px;
+  perspective:1400px;
+}
+
+/* BOARDING PASS */
+
+.j17-boarding{
+  position:absolute;
+  width:390px;
+  max-width:76vw;
+  height:210px;
+  right:0;
+  top:65px;
+  background:#f7f0df;
+  color:#203d40;
+  border-radius:5px;
+  box-shadow:0 25px 45px rgba(44,70,70,.28);
+  transform:rotate(8deg) translateX(100px);
+  opacity:0;
+  z-index:2;
+  animation:j17TicketIn 1.5s .6s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@keyframes j17TicketIn{
+  to{
+    opacity:1;
+    transform:rotate(7deg) translateX(0);
+  }
+}
+
+.j17-ticket-head{
+  height:43px;
+  padding:12px 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px dashed #b5a474;
+  font-size:8px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.j17-ticket-content{
+  padding:15px;
+  display:grid;
+  grid-template-columns:1fr 65px;
+  gap:12px;
+}
+
+.j17-ticket-label{
+  font-size:7px;
+  letter-spacing:2px;
+  opacity:.55;
+}
+
+.j17-ticket-name{
+  margin-top:3px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:28px;
+  line-height:1;
+}
+
+.j17-ticket-route{
+  display:flex;
+  justify-content:space-between;
+  margin-top:13px;
+  font-size:8px;
+  font-weight:700;
+}
+
+.j17-ticket-date{
+  margin-top:13px;
+  font-size:8px;
+  line-height:1.6;
+}
+
+.j17-barcode{
+  height:105px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #163638 0px,
+      #163638 2px,
+      transparent 2px,
+      transparent 5px
+    );
+}
+
+/* PASSPORT */
+
+.j17-passport{
+  position:absolute;
+  width:255px;
+  height:350px;
+  left:50%;
+  top:70px;
+  border-radius:7px;
+  border:2px solid #cdb46b;
+
+  background:
+    linear-gradient(
+      145deg,
+      #087052,
+      #07543f 50%,
+      #033728
+    );
+
+  box-shadow:
+    0 35px 60px rgba(30,60,60,.35),
+    inset 0 0 0 7px rgba(255,255,255,.04);
+
+  transform:
+    translateX(-58%)
+    rotate(-6deg)
+    translateY(100px)
+    scale(.82);
+
+  opacity:0;
+  z-index:5;
+
+  animation:
+    j17PassportIn
+    1.6s
+    .9s
+    cubic-bezier(.2,.95,.2,1)
+    forwards;
+}
+
+@keyframes j17PassportIn{
+
+  0%{
+    opacity:0;
+    transform:
+      translateX(-58%)
+      rotate(-13deg)
+      translateY(100px)
+      scale(.82);
+  }
+
+  65%{
+    opacity:1;
+    transform:
+      translateX(-58%)
+      rotate(-2deg)
+      translateY(-7px)
+      scale(1.03);
+  }
+
+  100%{
+    opacity:1;
+    transform:
+      translateX(-58%)
+      rotate(-4deg)
+      translateY(0)
+      scale(1);
+  }
+}
+
+.j17-passport:before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(215,190,115,.55);
+  border-radius:4px;
+}
+
+.j17-country{
+  position:absolute;
+  top:28px;
+  width:100%;
+  text-align:center;
+  color:#e5d181;
+  font-size:9px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.j17-emblem{
+  position:absolute;
+  top:78px;
+  left:50%;
+  transform:translateX(-50%);
+  width:102px;
+  height:102px;
+  border:1px solid #d7bd70;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#e1c675;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:38px;
+}
+
+.j17-passport-name{
+  position:absolute;
+  bottom:94px;
+  width:100%;
+  text-align:center;
+  padding:0 18px;
+  color:#e4ce7c;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:16px;
+  letter-spacing:2px;
+}
+
+.j17-passport-word{
+  position:absolute;
+  bottom:55px;
+  width:100%;
+  text-align:center;
+  color:#e5cf7c;
+  font-size:14px;
+  letter-spacing:5px;
+  font-weight:600;
+}
+
+.j17-passport-word small{
+  display:block;
+  margin-top:2px;
+  font-size:8px;
+  letter-spacing:2px;
+}
+
+.j17-chip{
+  position:absolute;
+  bottom:22px;
+  left:50%;
+  transform:translateX(-50%);
+  width:34px;
+  height:23px;
+  border:2px solid #d8bd70;
+  border-radius:4px;
+}
+
+.j17-open{
+  position:absolute;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:15px 26px;
+  border:1px solid #a48649;
+  border-radius:30px;
+  background:rgba(250,244,229,.92);
+  color:#173d42;
+  font-size:9px;
+  letter-spacing:3px;
+  font-weight:700;
+  cursor:pointer;
+  z-index:50;
+  animation:j17Pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes j17Pulse{
+  0%,100%{
+    box-shadow:0 8px 25px rgba(50,80,80,.15);
+  }
+
+  50%{
+    box-shadow:0 10px 35px rgba(50,80,80,.35);
+  }
+}
+
+.j17-opening.opened .j17-passport{
+  animation:j17PassportOpen 1.5s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes j17PassportOpen{
+
+  0%{
+    transform:
+      translateX(-58%)
+      rotate(-4deg)
+      translateY(0)
+      scale(1);
+  }
+
+  50%{
+    transform:
+      translateX(-80%)
+      rotate(-9deg)
+      translateY(-20px)
+      scale(1.04);
+  }
+
+  100%{
+    transform:
+      translateX(-118%)
+      rotate(-13deg)
+      translateY(-35px)
+      scale(1.04);
+  }
+}
+
+.j17-opening.opened .j17-boarding{
+  animation:j17BoardOpen 1.5s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes j17BoardOpen{
+
+  from{
+    transform:rotate(7deg) translateX(0);
+  }
+
+  to{
+    transform:
+      rotate(2deg)
+      translate(30%,-75px)
+      scale(1.08);
+  }
+}
+
+.j17-opening.opened .j17-open{
+  opacity:0;
+  pointer-events:none;
+  transition:.4s;
+}
+
+.j17-welcome{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translate(-50%,30px);
+  opacity:0;
+  padding:11px 20px;
+  border:1px solid #a48649;
+  background:#f7f0df;
+  color:#173d42;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:20px;
+  z-index:60;
+  transition:1s .5s;
+}
+
+.j17-opening.opened .j17-welcome{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+.sound-toggle{
+  position:fixed;
+  top:16px;
+  right:16px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:rgba(250,244,229,.92);
+  border:1px solid #a48649;
+  color:#173d42;
+  font-size:19px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:9998;
+  box-shadow:0 8px 20px rgba(30,50,50,.2);
+}
+
+.sound-toggle.show{
+  display:flex;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section{
+  padding:80px 18px;
+  background:#eee4cf;
+}
+
+.paper{
+  width:min(980px,100%);
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title small{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#748184;
+}
+
+.section-title h2{
+  margin-top:10px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:55px;
+  font-weight:500;
+  font-style:italic;
+  color:#214c55;
+}
+
+
+/* =========================================================
+   PASSPORT INVITATION
+========================================================= */
+
+.invitation{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.28),transparent 22%),
+    radial-gradient(circle at 85% 80%,rgba(120,100,60,.08),transparent 25%),
+    #d9ceb2;
+  overflow:hidden;
+}
+
+.invitation .section-title{
+  margin-bottom:28px;
+}
+
+.invitation .section-title h2{
+  font-size:48px;
+}
+
+.passport-spread{
+  max-width:960px;
+  margin:auto;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:610px;
+  filter:drop-shadow(0 25px 35px rgba(55,45,30,.22));
+}
+
+.passport-page{
+  position:relative;
+  overflow:hidden;
+  padding:52px 48px 46px;
+  background:
+    linear-gradient(rgba(255,255,255,.18),rgba(255,255,255,.18)),
+    #f2e8cf;
+  border:1px solid #cfc09e;
+}
+
+.passport-page.left{
+  border-radius:10px 2px 2px 10px;
+  transform:rotate(-1deg);
+}
+
+.passport-page.right{
+  border-radius:2px 10px 10px 2px;
+  transform:rotate(1deg);
+}
+
+.passport-page:before{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border:1px solid rgba(151,128,79,.18);
+  pointer-events:none;
+}
+
+.passport-page:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  pointer-events:none;
+  background-image:
+    radial-gradient(#6d5d42 0.7px,transparent .7px);
+  background-size:9px 9px;
+}
+
+.passport-spread:after{
+  content:"";
+  position:absolute;
+  z-index:10;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:28px;
+  transform:translateX(-50%);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(70,55,35,.14),
+      rgba(255,255,255,.32),
+      rgba(70,55,35,.12)
+    );
+  opacity:.65;
+  pointer-events:none;
+}
+
+.passport-page > *{
+  position:relative;
+  z-index:3;
+}
+
+.passport-eyebrow{
+  font-size:9px;
+  letter-spacing:4px;
+  color:#657574;
+}
+
+.passport-script{
+  margin-top:18px;
+  font-family:Caveat,cursive;
+  font-size:70px;
+  line-height:.75;
+  color:#274d55;
+}
+
+.passport-sweet{
+  margin-top:22px;
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:3px;
+  color:#29444b;
+}
+
+.passport-route{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:15px;
+  font-family:Caveat,cursive;
+  font-size:25px;
+  color:#6c6659;
+}
+
+.passport-route-line{
+  width:70px;
+  border-top:1px dashed #9b8a65;
+  position:relative;
+}
+
+.passport-route-line:after{
+  content:"✈️";
+  position:absolute;
+  right:-3px;
+  top:-13px;
+  font-size:14px;
+}
+
+.world-watermark{
+  position:absolute;
+  left:22px;
+  right:22px;
+  top:185px;
+  height:210px;
+  opacity:.16;
+  font-size:145px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  filter:grayscale(1);
+}
+
+.j17-stamp{
+  width:104px;
+  height:104px;
+  border:2px dashed #8c7d5e;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:#766c59;
+  position:absolute;
+  right:28px;
+  bottom:30px;
+  transform:rotate(-10deg);
+  z-index:5;
+  background:rgba(244,235,211,.58);
+}
+
+.j17-stamp strong{
+  font-family:Caveat,cursive;
+  font-size:23px;
+}
+
+.j17-stamp small{
+  font-size:7px;
+  letter-spacing:1px;
+}
+
+.j17-stamp .stamp-plane{
+  font-size:20px;
+}
+
+.invitation-note{
+  margin-top:225px;
+  max-width:290px;
+  padding-right:8px;
+  font-family:Caveat,cursive;
+  font-size:24px;
+  line-height:1.35;
+  color:#69706b;
+}
+
+.passport-line{
+  width:100%;
+  border-top:1px solid rgba(119,101,65,.3);
+  margin:25px 0;
+}
+
+.travel-docket{
+  position:absolute;
+  right:22px;
+  top:315px;
+  width:215px;
+  padding:20px 18px 24px;
+  background:#f8f0dd;
+  border:1px solid #cbbd9d;
+  box-shadow:0 12px 20px rgba(50,45,30,.18);
+  transform:rotate(4deg);
+  z-index:6!important;
+}
+
+.travel-docket:before{
+  content:"";
+  position:absolute;
+  top:-9px;
+  left:55px;
+  width:70px;
+  height:20px;
+  background:rgba(214,192,145,.7);
+  transform:rotate(-4deg);
+}
+
+.docket-title{
+  font-size:8px;
+  letter-spacing:3px;
+  color:#7a7669;
+}
+
+.docket-name{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:26px;
+  margin-top:7px;
+  color:#274b52;
+}
+
+.docket-row{
+  margin-top:13px;
+}
+
+.docket-row span{
+  display:block;
+  font-size:7px;
+  letter-spacing:2px;
+  color:#8a867a;
+}
+
+.docket-row strong{
+  display:block;
+  margin-top:3px;
+  font-family:Georgia,serif;
+  font-size:12px;
+  color:#33484d;
+}
+
+.docket-route{
+  display:flex;
+  justify-content:space-between;
+  margin-top:18px;
+  padding-top:12px;
+  border-top:1px dashed #b5a77f;
+  font-size:8px;
+  font-weight:700;
+}
+
+.docket-barcode{
+  height:30px;
+  margin-top:15px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #28484a 0,
+      #28484a 2px,
+      transparent 2px,
+      transparent 5px
+    );
+}
+
+.destination-title{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:34px;
+  color:#294b52;
+  margin-top:15px;
+}
+
+.destination-sub{
+  font-family:Caveat,cursive;
+  font-size:24px;
+  color:#777060;
+  margin-top:2px;
+}
+
+.destination-info{
+  margin-top:45px;
+  position:relative;
+  z-index:4;
+  padding-right:8px;
+}
+
+.destination-row{
+  display:flex;
+  gap:13px;
+  margin:22px 0;
+  align-items:flex-start;
+}
+
+.destination-icon{
+  font-size:20px;
+  width:25px;
+}
+
+.destination-row span{
+  display:block;
+  font-size:7px;
+  letter-spacing:2px;
+  color:#817c70;
+}
+
+.destination-row strong{
+  display:block;
+  margin-top:4px;
+  font-family:Georgia,serif;
+  font-size:14px;
+  line-height:1.45;
+  color:#344a4f;
+}
+
+.destination-stamp{
+  position:absolute;
+  right:30px;
+  bottom:38px;
+  width:118px;
+  height:118px;
+  border:2px solid #8c7d5e;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transform:rotate(8deg);
+  color:#766b58;
+  background:rgba(244,235,211,.55);
+  z-index:5;
+}
+
+.destination-stamp:before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px dashed #8c7d5e;
+  border-radius:50%;
+}
+
+.destination-stamp strong{
+  font-family:Caveat,cursive;
+  font-size:24px;
+  z-index:2;
+}
+
+.destination-stamp small{
+  font-size:7px;
+  letter-spacing:2px;
+  z-index:2;
+}
+
+.map-button{
+  display:inline-block;
+  margin-top:8px;
+  padding:12px 18px;
+  background:#294e57;
+  color:#fff;
+  text-decoration:none;
+  font-size:9px;
+  letter-spacing:1.5px;
+  border-radius:2px;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey{
+  background:#dce8e8;
+}
+
+.journey-card{
+  max-width:850px;
+  margin:auto;
+  padding:55px 45px;
+  background:#f5eddc;
+  border:1px solid #cdbf9c;
+  box-shadow:0 20px 40px rgba(50,60,60,.15);
+  text-align:center;
+}
+
+.journey-card h3{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:44px;
+  font-style:italic;
+  color:#244e56;
+}
+
+.journey-card p{
+  max-width:650px;
+  margin:20px auto 0;
+  font-family:Caveat,cursive;
+  font-size:25px;
+  line-height:1.4;
+  color:#6b716e;
+}
+
+
+/* =========================================================
+   SCRAPBOOK GALLERY
+========================================================= */
+
+.scrapbook{
+  padding:85px 18px;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(255,255,255,.6),transparent 25%),
+    #f5e8e7;
+}
+
+.scrapbook-inner{
+  width:min(950px,100%);
+  margin:auto;
+}
+
+.scrapbook-title{
+  text-align:center;
+  margin-bottom:38px;
+}
+
+.scrapbook-title h2{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:58px;
+  font-weight:400;
+  color:#172b30;
+}
+
+.scrapbook-title p{
+  margin-top:8px;
+  font-family:Caveat,cursive;
+  font-size:22px;
+  color:#777;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.photo-card{
+  position:relative;
+  overflow:hidden;
+  background:#fffdf7;
+  padding:9px;
+  box-shadow:
+    0 12px 24px rgba(65,50,45,.16);
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.photo-card:nth-child(odd){
+  transform:rotate(-1.2deg);
+}
+
+.photo-card:nth-child(even){
+  transform:rotate(1.2deg);
+}
+
+.photo-card:hover{
+  transform:rotate(0) translateY(-5px) scale(1.015);
+}
+
+.photo-card img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  display:block;
+}
+
+.photo-card:before{
+  content:"";
+  position:absolute;
+  top:-6px;
+  left:50%;
+  transform:translateX(-50%) rotate(-2deg);
+  width:70px;
+  height:18px;
+  background:rgba(220,198,147,.7);
+  z-index:3;
+}
+
+.photo-number{
+  position:absolute;
+  right:12px;
+  bottom:10px;
+  background:rgba(255,248,225,.85);
+  padding:4px 7px;
+  font-family:Caveat,cursive;
+  font-size:13px;
+  color:#6e6556;
+  z-index:3;
+}
+
+.photo-card:nth-child(3n):before{
+  transform:translateX(-50%) rotate(4deg);
+  background:rgba(180,204,204,.65);
+}
+
+.photo-card:nth-child(4n):before{
+  background:rgba(214,174,165,.6);
+}
+
+.photo-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(15,25,27,.88);
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.photo-modal.show{
+  display:flex;
+}
+
+.photo-modal img{
+  max-width:95vw;
+  max-height:90vh;
+  object-fit:contain;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.photo-close{
+  position:absolute;
+  right:25px;
+  top:20px;
+  width:45px;
+  height:45px;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:50%;
+  background:rgba(255,255,255,.1);
+  color:white;
+  font-size:25px;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   RSVP
+========================================================= */
+
+.checkin{
+  background:#d9e6e7;
+}
+
+.form-card{
+  max-width:650px;
+  margin:auto;
+  background:#f6edd9;
+  padding:45px 35px;
+  border:1px solid #cbbd9b;
+  box-shadow:0 20px 40px rgba(50,60,60,.14);
+}
+
+.form-intro{
+  text-align:center;
+  font-family:Caveat,cursive;
+  font-size:23px;
+  color:#6d7775;
+  margin-bottom:28px;
+}
+
+.form-row{
+  margin-bottom:18px;
+}
+
+.form-row label{
+  display:block;
+  margin-bottom:7px;
+  font-size:9px;
+  letter-spacing:2px;
+  color:#6f7977;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select{
+  width:100%;
+  padding:13px 14px;
+  border:1px solid #c6b996;
+  background:#fffaf0;
+  color:#28474e;
+  outline:none;
+}
+
+.form-row textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.rsvp-submit{
+  width:100%;
+  border:0;
+  padding:15px;
+  background:#294e57;
+  color:white;
+  cursor:pointer;
+  letter-spacing:2px;
+  font-size:10px;
+}
+
+.rsvp-submit:disabled{
+  opacity:.55;
+}
+
+.rsvp-message{
+  text-align:center;
+  margin-top:18px;
+  font-family:Caveat,cursive;
+  font-size:21px;
+  color:#5f706f;
+}
+
+
+/* =========================================================
+   WISHES
+========================================================= */
+
+.wishes{
+  background:#efe5d0;
+}
+
+.wishes-list{
+  max-width:850px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.wish-card{
+  background:#f9f1df;
+  border:1px solid #cdbf9e;
+  padding:22px;
+  box-shadow:0 10px 22px rgba(60,50,40,.1);
+}
+
+.wish-name{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:23px;
+  color:#284e56;
+}
+
+.wish-text{
+  margin-top:8px;
+  font-family:Caveat,cursive;
+  font-size:21px;
+  line-height:1.4;
+  color:#6e716c;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px;
+  background:
+    radial-gradient(circle at center,#d9edf0,#9fc6d2);
+}
+
+.final h2{
+  font-family:Cormorant Garamond,Georgia,serif;
+  font-size:65px;
+  font-style:italic;
+  color:#19424c;
+}
+
+.final p{
+  margin-top:15px;
+  font-family:Caveat,cursive;
+  font-size:26px;
+  color:#48666b;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+  .j17-content{
+    min-height:700px;
+  }
+
+  .j17-travel{
+    transform:scale(.80);
+    transform-origin:top center;
+    margin-bottom:-70px;
+  }
+
+  .j17-title{
+    font-size:43px;
+  }
+
+  .j17-subtitle{
+    font-size:18px;
+  }
+
+  .j17-welcome{
+    white-space:nowrap;
+    font-size:16px;
+  }
+
+  .passport-spread{
+    display:block;
+    min-height:auto;
+    padding-bottom:0;
+  }
+
+  .passport-page{
+    min-height:620px;
+    padding:42px 28px;
+  }
+
+  .passport-page.right{
+    margin-top:0;
+    min-height:760px;
+  }
+
+  .passport-spread:after{
+    display:none;
+  }
+
+  .passport-script{
+    font-size:58px;
+  }
+
+  .world-watermark{
+    top:200px;
+    font-size:120px;
+  }
+
+  .invitation-note{
+    margin-top:225px;
+    font-size:22px;
+    line-height:1.4;
+    max-width:72%;
+    padding-right:0;
+  }
+
+  .j17-stamp{
+    width:96px;
+    height:96px;
+    right:22px;
+    bottom:34px;
+  }
+
+  .travel-docket{
+    position:absolute;
+    right:14px;
+    top:210px;
+    width:calc(100% - 28px);
+    max-width:350px;
+    left:50%;
+    transform:translateX(-50%) rotate(2deg);
+    z-index:6!important;
+  }
+
+  .destination-info{
+    margin-top:390px;
+    padding-right:0;
+  }
+
+  .destination-stamp{
+    bottom:24px;
+    right:18px;
+    width:100px;
+    height:100px;
+  }
+
+  .destination-title{
+    font-size:34px;
+  }
+
+  .destination-sub{
+    font-size:22px;
+  }
+
+  .docket-name{
+    font-size:25px;
+  }
+
+  .section{
+    padding:65px 12px;
+  }
+
+  .section-title h2{
+    font-size:44px;
+  }
+
+  .journey-card{
+    padding:40px 25px;
+  }
+
+  .journey-card h3{
+    font-size:38px;
+  }
+
+  .journey-card p{
+    font-size:22px;
+  }
+
+  /* PHOTO GALLERY — 2 COLUMNS ON PHONE */
+
+  .gallery-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:6px !important;
+    width:100% !important;
+  }
+
+  .gallery-grid > *{
+    width:auto !important;
+    max-width:none !important;
+    grid-column:auto !important;
+  }
+
+  .gallery-grid img{
+    width:100% !important;
+    height:auto !important;
+    display:block !important;
+    object-fit:cover;
+  }
+
+  .scrapbook{
+    padding:65px 9px;
+  }
+
+  .scrapbook-title h2{
+    font-size:47px;
+  }
+
+  .scrapbook-title p{
+    font-size:20px;
+  }
+
+  .photo-card{
+    padding:5px;
+  }
+
+  .photo-card:before{
+    width:48px;
+    height:12px;
+    top:-4px;
+  }
+
+  .photo-number{
+    right:7px;
+    bottom:7px;
+    font-size:11px;
+  }
+
+  .form-card{
+    padding:35px 22px;
+  }
+
+  .wishes-list{
+    grid-template-columns:1fr;
+  }
+
+  .final h2{
+    font-size:48px;
+  }
+
+}
+
+
+/* smaller phones */
+
+@media(max-width:420px){
+
+  .j17-travel{
+    transform:scale(.70);
+    margin-bottom:-115px;
+  }
+
+  .j17-title{
+    font-size:38px;
+  }
+
+  .j17-kicker{
+    font-size:8px;
+    letter-spacing:4px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" src="https://files.catbox.moe/heg2d6.mp3" loop preload="auto"></audio>
+
+<button class="sound-toggle" id="soundToggle" aria-label="Mute music" type="button">🔊</button>
+
+<div id="JENNIFER17">
+
+<!-- =======================================================
+     OPENING
+======================================================= -->
+
+<section class="j17-opening" id="j17Opening">
+
+  <div class="j17-cloud j17-cloud1"></div>
+  <div class="j17-cloud j17-cloud2"></div>
+  <div class="j17-cloud j17-cloud3"></div>
+  <div class="j17-cloud j17-cloud4"></div>
+
+  <div class="j17-airplane">✈️</div>
+
+  <div class="j17-content">
+
+    <div class="j17-kicker">
+      PASSPORT TO 17
+    </div>
+
+    <div class="j17-title">
+      Jennifer Gizelle Kosasih
+    </div>
+
+    <div class="j17-subtitle">
+      Sweet 17 · Around the World
+    </div>
+
+    <div class="j17-travel">
+
+      <div class="j17-boarding">
+
+        <div class="j17-ticket-head">
+          <span>BOARDING PASS</span>
+          <span>FIRST CLASS ✦</span>
+        </div>
+
+        <div class="j17-ticket-content">
+
+          <div>
+
+            <div class="j17-ticket-label">
+              PASSENGER
+            </div>
+
+            <div class="j17-ticket-name">
+              Jennifer Gizelle Kosasih
+            </div>
+
+            <div class="j17-ticket-route">
+              <span>SWEET 17</span>
+              <span>VIP 17A</span>
+            </div>
+
+            <div class="j17-ticket-date">
+              <b>18 SEPTEMBER 2026</b>
+              <br>
+              6:30 PM — FINISH
+            </div>
+
+          </div>
+
+          <div class="j17-barcode"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="j17-passport">
+
+        <div class="j17-country">
+          REPUBLIK INDONESIA
+        </div>
+
+        <div class="j17-emblem">
+          17
+        </div>
+
+        <div class="j17-passport-name">
+          JENNIFER GIZELLE KOSASIH
+        </div>
+
+        <div class="j17-passport-word">
+          PASPOR
+          <small>PASSPORT</small>
+        </div>
+
+        <div class="j17-chip"></div>
+
+      </div>
+
+    </div>
+
+    <button class="j17-open" id="j17Open">
+      TAP TO OPEN YOUR PASSPORT ✈️
+    </button>
+
+    <div class="j17-welcome">
+      Welcome aboard, Jennifer's Sweet 17 ✈️
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     INVITATION
+======================================================= -->
+
+<section class="section invitation" id="invitation">
+
+  <div class="paper">
+
+    <div class="section-title">
+      <small>WELCOME ABOARD ✈️</small>
+      <h2>Passport Invitation</h2>
+    </div>
+
+    <div class="passport-spread">
+
+      <div class="passport-page left">
+
+        <div class="passport-eyebrow">
+          WELCOME ABOARD ✈️
+        </div>
+
+        <div class="passport-script">
+          Jennifer's
+        </div>
+
+        <div class="passport-sweet">
+          SWEET 17
+        </div>
+
+        <div class="passport-route">
+          <span>AROUND</span>
+          <div class="passport-route-line"></div>
+          <span>WORLD</span>
+        </div>
+
+        <div class="world-watermark">
+          🌎
+        </div>
+
+        <div class="invitation-note">
+          Seventeen years, countless memories,
+          and a whole world waiting to be explored.
+          Come celebrate this special journey with Jennifer.
+        </div>
+
+        <div class="passport-line"></div>
+
+        <div style="
+          font-family:Caveat,cursive;
+          font-size:21px;
+          color:#817762;
+        ">
+          ✦ passport stamp no. 17 ✦
+        </div>
+
+        <div class="j17-stamp">
+          <div class="stamp-plane">✈️</div>
+          <strong>SWEET 17</strong>
+          <small>18 SEP 2026</small>
+        </div>
+
+      </div>
+
+
+      <div class="passport-page right">
+
+        <div class="passport-eyebrow">
+          NEXT DESTINATION
+        </div>
+
+        <div class="destination-title">
+          Let's Celebrate
+        </div>
+
+        <div class="destination-sub">
+          the journey begins here ♡
+        </div>
+
+        <div class="travel-docket">
+
+          <div class="docket-title">
+            VIP TRAVEL DOCKET
+          </div>
+
+          <div class="docket-name">
+            Jennifer Gizelle
+          </div>
+
+          <div class="docket-row">
+            <span>DEPARTURE</span>
+            <strong>18 SEPTEMBER 2026</strong>
+          </div>
+
+          <div class="docket-row">
+            <span>BOARDING</span>
+            <strong>6:30 PM — FINISH</strong>
+          </div>
+
+          <div class="docket-row">
+            <span>DESTINATION</span>
+            <strong>MERCURE CRYSTAL 5</strong>
+          </div>
+
+          <div class="docket-route">
+            <span>JKT</span>
+            <span>✈️</span>
+            <span>VIP 17A</span>
+          </div>
+
+          <div class="docket-barcode"></div>
+
+        </div>
+
+
+        <div class="destination-info">
+
+          <div class="destination-row">
+
+            <div class="destination-icon">
+              📅
+            </div>
+
+            <div>
+              <span>DATE</span>
+              <strong>18 SEPTEMBER 2026</strong>
+            </div>
+
+          </div>
+
+
+          <div class="destination-row">
+
+            <div class="destination-icon">
+              ◷
+            </div>
+
+            <div>
+              <span>TIME</span>
+              <strong>18:30 — FINISH</strong>
+            </div>
+
+          </div>
+
+
+          <div class="destination-row">
+
+            <div class="destination-icon">
+              📍
+            </div>
+
+            <div>
+              <span>DESTINATION</span>
+
+              <strong>
+                Mercure Crystal 5<br>
+                Mercure Samarinda
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <a
+            class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Mercure+Samarinda+Jalan+Mulawarman+171"
+            target="_blank">
+
+            📍 VIEW DESTINATION
+
+          </a>
+
+        </div>
+
+
+        <div class="destination-stamp">
+
+          <strong>MERCURE</strong>
+
+          <small>
+            CRYSTAL 5 • SAMARINDA
+          </small>
+
+          <small>
+            ✦ VIP PASS ✦
+          </small>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     JOURNEY
+======================================================= -->
+
+<section class="section journey">
+
+  <div class="journey-card">
+
+    <h3>
+      The Journey of 17
+    </h3>
+
+    <p>
+      Seventeen years, countless memories,
+      and now another beautiful chapter begins.
+      Pack your bags — we're going around the world!
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PHOTO GALLERY
+======================================================= -->
+
+<section class="scrapbook" id="gallery">
+
+  <div class="scrapbook-inner">
+
+    <div class="scrapbook-title">
+
+      <h2>
+        Photo Gallery
+      </h2>
+
+      <p>
+        A little collection of Jennifer's favorite memories ♡
+      </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <!-- PHOTO 01 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 1">
+
+        <div class="photo-number">
+          01
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 02 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 2">
+
+        <div class="photo-number">
+          02
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 03 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 3">
+
+        <div class="photo-number">
+          03
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 04 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 4">
+
+        <div class="photo-number">
+          04
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 05 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 5">
+
+        <div class="photo-number">
+          05
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 06 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 6">
+
+        <div class="photo-number">
+          06
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 07 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 7">
+
+        <div class="photo-number">
+          07
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 08 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 8">
+
+        <div class="photo-number">
+          08
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 09 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 9">
+
+        <div class="photo-number">
+          09
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 10 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 10">
+
+        <div class="photo-number">
+          10
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 11 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 11">
+
+        <div class="photo-number">
+          11
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 12 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 12">
+
+        <div class="photo-number">
+          12
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 13 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 13">
+
+        <div class="photo-number">
+          13
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 14 -->
+      <div
+        class="photo-card"
+        onclick="openPhoto(this.querySelector('img').src)">
+
+        <img
+          src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85"
+          alt="Jennifer photo 14">
+
+        <div class="photo-number">
+          14
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PHOTO MODAL -->
+
+<div
+  class="photo-modal"
+  id="photoModal"
+  onclick="closePhoto(event)">
+
+  <button
+    class="photo-close"
+    onclick="closePhoto(event)">
+    ×
+  </button>
+
+  <img
+    id="photoModalImage"
+    src=""
+    alt="Expanded photo">
+
+</div>
+
+
+<!-- =======================================================
+     RSVP
+======================================================= -->
+
+<section class="section checkin" id="checkin">
+
+  <div class="section-title">
+
+    <small>
+      CONFIRM YOUR JOURNEY
+    </small>
+
+    <h2>
+      RSVP
+    </h2>
+
+  </div>
+
+
+  <div class="form-card">
+
+    <div class="form-intro">
+      Please confirm your seat aboard Jennifer's
+      Sweet 17 journey ✈️
+    </div>
+
+
+    <form
+      class="form"
+      id="rsvpForm">
+
+      <div class="form-row">
+
+        <label>
+          YOUR NAME
+        </label>
+
+        <input
+          type="text"
+          id="rsvpName"
+          placeholder="Enter your name"
+          required>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <label>
+          ATTENDANCE
+        </label>
+
+        <select
+          id="rsvpAttendance"
+          required>
+
+          <option value="">
+            Select
+          </option>
+
+          <option value="Yes">
+            Yes, I'll be there!
+          </option>
+
+          <option value="No">
+            Sorry, I can't make it
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <label>
+          NUMBER OF GUESTS
+        </label>
+
+        <input
+          type="number"
+          id="rsvpGuests"
+          min="1"
+          max="10"
+          value="1"
+          required>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="rsvp-submit"
+        id="rsvpSubmit">
+
+        CONFIRM MY SEAT ✈️
+
+      </button>
+
+
+      <div
+        class="rsvp-message"
+        id="rsvpMessage"
+        aria-live="polite">
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     WISHES
+======================================================= -->
+
+<section class="section wishes" id="wishes">
+
+  <div class="section-title">
+
+    <small>
+      LEAVE A LITTLE LOVE
+    </small>
+
+    <h2>
+      Wishes for Jennifer
+    </h2>
+
+  </div>
+
+
+  <div class="form-card">
+
+    <form id="wishForm">
+
+      <div class="form-row">
+
+        <label>
+          YOUR NAME
+        </label>
+
+        <input
+          type="text"
+          id="wishName"
+          placeholder="Your name"
+          required>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <label>
+          YOUR WISH
+        </label>
+
+        <textarea
+          id="wishText"
+          placeholder="Write a birthday wish for Jennifer..."
+          required>
+        </textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="rsvp-submit">
+
+        SEND MY WISH ♡
+
+      </button>
+
+
+      <div
+        class="rsvp-message"
+        id="wishMessage"
+        aria-live="polite">
+      </div>
+
+    </form>
+
+  </div>
+
+
+  <div
+    class="wishes-list"
+    id="wishesList">
+
+    <p id="wishesEmpty" style="grid-column:1/-1; text-align:center; font-family:Caveat,cursive; font-size:22px; color:#8a867a;">
+      Be the first to leave a wish for Jennifer ♡
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     FINAL
+======================================================= -->
+
+<section class="final">
+
+  <div>
+
+    <h2>
+      See You Around the World ✈️
+    </h2>
+
+    <p>
+      Jennifer Gizelle Kosasih · Sweet 17
+    </p>
+
+    <p>
+      18 September 2026 · 6:30 PM — Finish
+    </p>
+
+    <p>
+      Mercure Crystal 5, Mercure Samarinda
+    </p>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PASSPORT OPENING
+========================================================= */
+
+(function(){
+
+  const opening =
+    document.getElementById("j17Opening");
+
+  const button =
+    document.getElementById("j17Open");
+
+  const audio =
+    document.getElementById("bgMusic");
+
+  const soundToggle =
+    document.getElementById("soundToggle");
+
+  button.addEventListener("click",function(){
+
+    opening.classList.add("opened");
+
+    audio.volume = 0.6;
+    audio.play().catch(function(){});
+
+    soundToggle.classList.add("show");
+
+    setTimeout(function(){
+
+      document
+        .getElementById("invitation")
+        .scrollIntoView({
+          behavior:"smooth"
+        });
+
+    },1800);
+
+  });
+
+  soundToggle.addEventListener("click",function(){
+
+    audio.muted = !audio.muted;
+    soundToggle.textContent = audio.muted ? "🔇" : "🔊";
+
+  });
+
+})();
+
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
+function openPhoto(src){
+
+  const modal =
+    document.getElementById("photoModal");
+
+  const image =
+    document.getElementById("photoModalImage");
+
+  image.src=src;
+
+  modal.classList.add("show");
+
+  document.body.style.overflow="hidden";
+}
+
+
+function closePhoto(event){
+
+  if(
+    event.target.id==="photoModal" ||
+    event.target.classList.contains("photo-close")
+  ){
+
+    const modal =
+      document.getElementById("photoModal");
+
+    modal.classList.remove("show");
+
+    document.body.style.overflow="";
+
+  }
+
+}
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+
+    const modal =
+      document.getElementById("photoModal");
+
+    modal.classList.remove("show");
+
+    document.body.style.overflow="";
+
+  }
+
+});
+
+
+/* =========================================================
+   BACKEND CONNECTION (Google Apps Script Web App)
+   =========================================================
+   Paste the Web App URL you get from deploying the companion
+   Apps Script (see rsvp-wishes-backend-setup.md) between the
+   quotes below. Until you do, RSVP and Wishes still work on
+   this page, but nothing is saved anywhere once you close it.
+========================================================= */
+
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxbQ11ZQxPoAD9VbBL8Ibu1-FgiujxSjc3jH-PFEUWWT-8lJEJx9uek0Uq8zbBXLY_--A/exec";
+
+function backendConfigured(){
+  return WEB_APP_URL && WEB_APP_URL.indexOf("https://") === 0;
+}
+
+/*
+  Apps Script Web Apps don't handle a CORS preflight (OPTIONS)
+  request, so POSTs are sent as text/plain to keep them as
+  "simple requests" that skip the preflight. The Apps Script
+  side reads the JSON out of the raw body itself.
+*/
+function postToBackend(payload){
+  return fetch(WEB_APP_URL, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(payload)
+  }).then(function(res){ return res.json(); });
+}
+
+function getFromBackend(action){
+  return fetch(WEB_APP_URL + "?action=" + encodeURIComponent(action))
+    .then(function(res){ return res.json(); });
+}
+
+
+/* =========================================================
+   RSVP
+========================================================= */
+
+document
+  .getElementById("rsvpForm")
+  .addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const button =
+      document.getElementById("rsvpSubmit");
+
+    const message =
+      document.getElementById("rsvpMessage");
+
+    const name =
+      document.getElementById("rsvpName").value.trim();
+
+    const attendance =
+      document.getElementById("rsvpAttendance").value;
+
+    const guests =
+      document.getElementById("rsvpGuests").value;
+
+    if(!name || !attendance){
+      return;
+    }
+
+    button.disabled=true;
+    button.textContent="CONFIRMING...";
+
+    if(backendConfigured()){
+
+      postToBackend({
+        action:"rsvp",
+        name:name,
+        attendance:attendance,
+        guests:guests
+      })
+      .then(function(data){
+
+        if(data && data.status==="ok"){
+
+          message.textContent=
+            "✈️ Your seat has been confirmed. See you there!";
+
+          button.textContent="SEAT CONFIRMED ✓";
+
+        }else{
+
+          throw new Error(data && data.message || "Unknown error");
+
+        }
+
+      })
+      .catch(function(){
+
+        message.textContent=
+          "Something went wrong sending your RSVP. Please try again.";
+
+        button.disabled=false;
+        button.textContent="CONFIRM MY SEAT ✈️";
+
+      });
+
+    }else{
+
+      /*
+        No backend configured yet — the RSVP is only
+        acknowledged on screen, not saved anywhere.
+      */
+
+      message.textContent=
+        "♡ Thank you, "+name+"! (Backend not connected yet, so this RSVP isn't saved anywhere — see rsvp-wishes-backend-setup.md.)";
+
+      button.disabled=false;
+      button.textContent="SEAT CONFIRMED ✓";
+
+    }
+
+  });
+
+
+/* =========================================================
+   WISHES
+========================================================= */
+
+document
+  .getElementById("wishForm")
+  .addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const submitBtn =
+      document.querySelector("#wishForm .rsvp-submit");
+
+    const name =
+      document.getElementById("wishName").value.trim();
+
+    const wish =
+      document.getElementById("wishText").value.trim();
+
+    const message =
+      document.getElementById("wishMessage");
+
+    if(!name || !wish){
+      return;
+    }
+
+    submitBtn.disabled=true;
+    message.textContent="Sending your wish...";
+
+    if(backendConfigured()){
+
+      postToBackend({
+        action:"wish",
+        name:name,
+        wish:wish
+      })
+      .then(function(data){
+
+        if(data && data.status==="ok"){
+
+          message.textContent=
+            "♡ Your wish has been sent to Jennifer!";
+
+          document.getElementById("wishForm").reset();
+
+          loadWishes();
+
+        }else{
+
+          throw new Error(data && data.message || "Unknown error");
+
+        }
+
+      })
+      .catch(function(){
+
+        message.textContent=
+          "Something went wrong sending your wish. Please try again.";
+
+      })
+      .finally(function(){
+
+        submitBtn.disabled=false;
+
+      });
+
+    }else{
+
+      /*
+        No backend configured yet — show the wish on this
+        visitor's screen only; it won't be saved or visible
+        to anyone else, and disappears on refresh.
+      */
+
+      message.textContent=
+        "♡ Added below for now — connect the backend (see rsvp-wishes-backend-setup.md) so wishes are saved for everyone.";
+
+      addWishToPage(name,wish);
+
+      document.getElementById("wishForm").reset();
+
+      submitBtn.disabled=false;
+
+    }
+
+  });
+
+
+function addWishToPage(name,wish){
+
+  const list =
+    document.getElementById("wishesList");
+
+  const emptyMsg =
+    document.getElementById("wishesEmpty");
+
+  if(emptyMsg){
+    emptyMsg.remove();
+  }
+
+  const card =
+    document.createElement("div");
+
+  card.className="wish-card";
+
+  const nameElement =
+    document.createElement("div");
+
+  nameElement.className="wish-name";
+
+  nameElement.textContent=
+    "♡ "+name;
+
+  const wishElement =
+    document.createElement("div");
+
+  wishElement.className="wish-text";
+
+  wishElement.textContent=
+    wish;
+
+  card.appendChild(nameElement);
+
+  card.appendChild(wishElement);
+
+  list.prepend(card);
+
+}
+
+
+function loadWishes(){
+
+  if(!backendConfigured()){
+    return;
+  }
+
+  getFromBackend("wishes")
+    .then(function(items){
+
+      const list =
+        document.getElementById("wishesList");
+
+      if(!items || !items.length){
+
+        list.innerHTML=
+          '<p id="wishesEmpty" style="grid-column:1/-1; text-align:center; font-family:Caveat,cursive; font-size:22px; color:#8a867a;">Be the first to leave a wish for Jennifer ♡</p>';
+
+        return;
+
+      }
+
+      list.innerHTML="";
+
+      items.forEach(function(item){
+
+        const card =
+          document.createElement("div");
+
+        card.className="wish-card";
+
+        const name =
+          document.createElement("div");
+
+        name.className="wish-name";
+
+        name.textContent=
+          "♡ "+item.name;
+
+        const wish =
+          document.createElement("div");
+
+        wish.className="wish-text";
+
+        wish.textContent=
+          item.wish;
+
+        card.appendChild(name);
+
+        card.appendChild(wish);
+
+        list.appendChild(card);
+
+      });
+
+    })
+    .catch(function(){
+      /* Silently ignore — page still works without saved wishes. */
+    });
+
+}
+
+
+window.addEventListener(
+  "load",
+  loadWishes
+);
+
+</script>
+
+</body>
+</html>
